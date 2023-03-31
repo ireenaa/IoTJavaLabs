@@ -1,19 +1,13 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
+import lombok.*;
 @AllArgsConstructor
 @Getter
+@Setter
 @NoArgsConstructor
 @ToString
-@Setter
 public class Ship {
-
-    private static final double NUMBER_ID = 10.4;
+    private static final double ID = 10.4;
 
     private String name;
 
@@ -25,34 +19,25 @@ public class Ship {
 
     private double currentLoad;
 
-    public void dock(String port){
+    public void dock(String port) {
         this.currentPort = port;
     }
 
-    public void setSpeed(double speed){
+    public void setSpeed(double speed) {
         this.maxSpeed = speed;
     }
 
-    public boolean load(double weight) {
-        if (currentLoad + weight <= maxCapacity){
+    public void load(double weight) {
+        if (currentLoad + weight <= maxCapacity) {
             currentLoad += weight;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    public boolean unload(double weight) {
-        if (currentLoad - weight > 0) {
-            currentLoad -= weight;
-            return true;
-        }
-        else {
-            return false;
         }
     }
 
+    public void unload(double weight) {
+        if (currentLoad - weight > 0) {
+            currentLoad -= weight;
+        }
+    }
     private static Ship instance = new Ship();
 
     public static Ship getInstance() {
@@ -67,8 +52,8 @@ public class Ship {
         ships[2] = Ship.getInstance();
         ships[3] = Ship.getInstance();
 
-        for (int i=0; i < ships.length; i++) {
-            System.out.println(ships[i].toString());
+        for (Ship element: ships) {
+            System.out.println(element);
         }
     }
 }
