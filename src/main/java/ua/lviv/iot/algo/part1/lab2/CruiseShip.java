@@ -14,7 +14,15 @@ public class CruiseShip extends Ship {
     private int supportStaffCount;
     private static final int TIME_OF_LOADING_ONE_PERSON = 5;
 
-    public CruiseShip(String name, String currentPort, double maxSpeed, double maxCapacity, double currentLoad, int passangersCount, int crewCount,int supportStaffCount) {
+    public CruiseShip(String name,
+                      String currentPort,
+                      double maxSpeed,
+                      double maxCapacity,
+                      double currentLoad,
+                      int passangersCount,
+                      int crewCount,
+                      int supportStaffCount)
+    {
         super(name, currentPort, maxSpeed, maxCapacity, currentLoad);
         this.passangersCount = passangersCount;
         this.crewCount = crewCount;
@@ -28,6 +36,6 @@ public class CruiseShip extends Ship {
 
     @Override
     public int calculateLoadTime() {
-        return TIME_OF_LOADING_ONE_PERSON * getTotalPeopleCount();
+        return TIME_OF_LOADING_ONE_PERSON * this.getTotalPeopleCount();
     }
 }
