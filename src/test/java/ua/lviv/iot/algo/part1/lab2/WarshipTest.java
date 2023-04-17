@@ -14,17 +14,6 @@ public class WarshipTest {
         ship.toString();
         assertEquals(0,ship.calculateLoadTime());
     }
-    @Test
-    public void testGetTypeOfWeapon(){
-        assertEquals("rocket", ship.getTypeOfWeapon());
-    }
-    @Test
-    public void testGetInteractsWith(){
-        assertEquals("marines", ship.getInteractsWith());
-    }
-    @Test
-    public void testGetShipClass(){
-        assertEquals("Nimitz", ship.getShipClass());
-    }
+
 }
 

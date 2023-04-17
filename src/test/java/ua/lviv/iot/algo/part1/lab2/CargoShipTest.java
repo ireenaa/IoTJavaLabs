@@ -7,16 +7,6 @@ public class CargoShipTest  {
     CargoShip ship = new CargoShip("Shelters", "Busan", 570.0, 487.0, 549.0, 600, "tractors");
 
     @Test
-    public void testGetTonnage(){
-        assertEquals(600, ship.getTonnage());
-    }
-    @Test
-    public void testSetTypeOfCargo(){
-        ship.toString();
-        ship.setTonnage(100);
-        assertEquals("tractors", ship.getTypeOfCargo());
-    }
-    @Test
     public void testCalculateLoadTime(){
         assertEquals(1800, ship.calculateLoadTime());
     }

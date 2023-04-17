@@ -14,17 +14,17 @@ public class CargoShip extends Ship {
     private int tonnage;
     private String typeOfCargo;
     private static final int TIME_OF_LOADING_CARGO = 60;
-    private static final int AMOUNT_OF_CARGO = 20;
+    private   static final int AMOUNT_OF_CARGO = 20;
 
-    public CargoShip
-            (String name,
-            String currentPort,
-            double maxSpeed,
-            double maxCapacity,
-            double currentLoad,
-            int tonnage,
-            String typeOfCargo)
-    {
+    public CargoShip(
+           final String name,
+           final String currentPort,
+           final double maxSpeed,
+           final double maxCapacity,
+           final double currentLoad,
+           final int tonnage,
+           final String typeOfCargo) {
+
         super(name, currentPort, maxSpeed, maxCapacity, currentLoad);
         this.tonnage = tonnage;
         this.typeOfCargo = typeOfCargo;

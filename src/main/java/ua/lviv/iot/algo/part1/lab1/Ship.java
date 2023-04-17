@@ -6,24 +6,35 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.stream.Stream;
+
 @AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
 public abstract class Ship {
-    protected static final double ID = 10.4;
+    private static final double ID = 10.4;
 
-    protected String name;
+    private String name;
 
-    protected String currentPort;
+    private String currentPort;
 
-    protected double maxSpeed;
+    private double maxSpeed;
 
-    protected double maxCapacity;
+    private double maxCapacity;
 
-    protected double currentLoad;
+    private double currentLoad;
 
     public abstract int getTotalPeopleCount();
     public abstract int calculateLoadTime();
+
+    public String getHeader() {
+        return "currentPort,currentLoad,name,maxCapacity,maxSpeed\n";
+    }
+
+    public String toCSV() {
+        return this.currentPort + ","+ this.currentLoad + "," + this.name + "," + this.maxCapacity + "," + this.maxSpeed + "\n";
+    }
 }
+

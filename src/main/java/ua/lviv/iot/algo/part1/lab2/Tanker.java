@@ -13,14 +13,15 @@ public class Tanker extends Ship {
     private float lengthOfShip;
     private float volume;
 
-    public Tanker(String name,
-                  String currentPort,
-                  double maxSpeed,
-                  double maxCapacity,
-                  double currentLoad,
-                  float lengthOfShip,
-                  float volume)
-    {
+    public Tanker(
+            final String name,
+            final String currentPort,
+            final double maxSpeed,
+            final double maxCapacity,
+            final double currentLoad,
+            final float lengthOfShip,
+            final float volume) {
+
         super(name, currentPort, maxSpeed, maxCapacity, currentLoad);
         this.lengthOfShip = lengthOfShip;
         this.volume = volume;

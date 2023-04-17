@@ -12,15 +12,16 @@ public class Warship extends Ship {
     private String interactsWith;
     private String shipClass;
 
-    public Warship(String name,
-                   String currentPort,
-                   double maxSpeed,
-                   double maxCapacity,
-                   double currentLoad,
-                   String typeOfWeapon,
-                   String interactsWith,
-                   String shipClass)
-    {
+    public Warship(
+            final String name,
+            final String currentPort,
+            final double maxSpeed,
+            final double maxCapacity,
+            final double currentLoad,
+            final String typeOfWeapon,
+            final String interactsWith,
+            final String shipClass) {
+
         super(name, currentPort, maxSpeed, maxCapacity, currentLoad);
         this.typeOfWeapon = typeOfWeapon;
         this.interactsWith = interactsWith;
@@ -34,4 +35,5 @@ public class Warship extends Ship {
     public int calculateLoadTime() {
         return 0;
     }
+
 }
