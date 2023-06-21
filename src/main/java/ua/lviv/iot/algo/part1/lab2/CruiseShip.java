@@ -1,32 +1,34 @@
 package ua.lviv.iot.algo.part1.lab2;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import ua.lviv.iot.algo.part1.lab1.Ship;
-
-import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-
 public class CruiseShip extends Ship {
     private int passangersCount;
     private int crewCount;
     private int supportStaffCount;
     private static final int TIME_OF_LOADING_ONE_PERSON = 5;
 
-    public CruiseShip(String name,
-                      String currentPort,
-                      double maxSpeed,
-                      double maxCapacity,
-                      double currentLoad,
-                      int passangersCount,
-                      int crewCount,
-                      int supportStaffCount)
-    {
+    public CruiseShip(
+            final String name,
+            final String currentPort,
+            final double maxSpeed,
+            final double maxCapacity,
+            final double currentLoad,
+            final int passangersCount,
+            final int crewCount,
+            final int supportStaffCount) {
+
         super(name, currentPort, maxSpeed, maxCapacity, currentLoad);
         this.passangersCount = passangersCount;
         this.crewCount = crewCount;
-        this.supportStaffCount =supportStaffCount;
+        this.supportStaffCount = supportStaffCount;
     }
 
     @Override
@@ -38,4 +40,5 @@ public class CruiseShip extends Ship {
     public int calculateLoadTime() {
         return TIME_OF_LOADING_ONE_PERSON * this.getTotalPeopleCount();
     }
+
 }
